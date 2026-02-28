@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# -------------------------------
+# 配置路径
+# -------------------------------
+PROJECT_DIR="/Users/my/Desktop/Claude/MY Project"
+SKILL_FILE="$PROJECT_DIR/skills/proofread.md"
+PAPERS_DIR="$PROJECT_DIR/papers"
+
+# 确保输出目录存在
+OUTPUT_DIR="$PROJECT_DIR/output"
+mkdir -p "$OUTPUT_DIR"
+
+# -------------------------------
+# 遍历所有 .docx 文件
+# -------------------------------
+for docx_file in "$PAPERS_DIR"/*.docx; do
+    base_name=$(basename "$docx_file" .docx)
+    echo "Processing $docx_file ..."
+
+    # 转换 Word -> Markdown
+    temp_md="$PAPERS_DIR/${base_name}.md"
+    pandoc "$docx_file" -o "$temp_md"
+done
+
+# 启动 Claude CLI 并依次加载 skills 和 agents
+
+claude 
+
+<<EOF
+/read $SKILL_FILE
+/read $AGENT_FILE
+/read $temp_md
+Proofread the document using the loaded skills and agents.
+EOF
+
+# 清理临时文件
+rm "$temp_md"
+
+
+echo "All files processed."
