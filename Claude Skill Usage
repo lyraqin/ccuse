@@ -23,7 +23,12 @@ MY_Project/
 └── scripts/ # Optional automation scripts (e.g., batch processing)
 
 
+cd "/Users/my/Desktop/Claude/MY Project"
+@agents/***.md
+@skills/***.md
 ---
+
+
 
 ## Skill & Agent Usage in Claude / Claude Code CLI
 
