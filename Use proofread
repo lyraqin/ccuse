@@ -4,9 +4,7 @@ Agent (proofreading engine)
         ↓
 Structured output
 
-# -------------------------------
 # 路径结构
-# -------------------------------
 MY Project/
 ├── agents/
 │   └── proofreader.md
