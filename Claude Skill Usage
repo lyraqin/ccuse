@@ -1,0 +1,70 @@
+# MY_Project Structure and Claude Skill Usage
+
+This document summarizes the folder structure of the project and provides instructions for using each skill and agent in Claude / Claude Code CLI.
+
+---
+
+## Project Structure
+MY_Project/
+├── CLAUDE.MD # Project guide, instructions
+├── MEMORY.MD # memory, and shortcuts
+├── agents/ # Task-specific agents
+│ ├── proofreader.md # Proofreading agent
+│ └── ...
+├── skills/ # Workflow controllers
+│ ├── proofread.md # Generic proofread skill for Word/LaTeX/Quarto
+│ ├── review-paper.md # Manuscript review skill
+│ ├── lit-review.md # Literature review skill
+│ └── create-slides.md # Slide creation skill
+├── papers/ # Source manuscripts / notes (.docx, .tex, .pdf, .qmd)
+├── output/ # Generated drafts (slides, Quarto drafts, figures)
+├── quality_reports/ # Proofread reports, review logs, plans, literature reviews
+├── templates/ # Report templates, notation registry
+└── scripts/ # Optional automation scripts (e.g., batch processing)
+
+
+---
+
+## Skill & Agent Usage in Claude / Claude Code CLI
+
+### 1. `/proofread` — Proofreading Documents
+
+```bash
+# Single file
+/proofread papers/example.docx
+
+# Batch process all files
+/proofread all
+
+### 2. `/review-paper` — Manuscript / Paper Review
+# Review a specific manuscript
+/review-paper papers/my_paper.docx
+
+# Review LaTeX or PDF
+/review-paper papers/research_note.tex
+
+### 3. ` /lit-review ` — Literature Search and Synthesis
+# Review a research topic
+/lit-review "climate risk and corporate finance"
+
+# Use a specific paper title or research question
+/lit-review "Fama-French 3-factor model"
+
+### 4. ` /create-slides`  — Slide Creation Workflow
+# Create slides for a topic
+/create-slides "Climate Risk Lecture"
+
+# Use a source paper as input
+/create-slides papers/climate_risk_paper.docx
+
+### 5. Batch Processing Example
+#!/usr/bin/env bash
+# scripts/batch_proofread.sh
+
+PROJECT_DIR="/Users/my/Desktop/Claude/MY Project"
+PAPERS_DIR="$PROJECT_DIR/papers"
+
+for docx_file in "$PAPERS_DIR"/*.docx; do
+  echo "Processing $docx_file ..."
+  claude /proofread "$docx_file"
+done
