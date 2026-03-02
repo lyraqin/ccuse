@@ -50,10 +50,10 @@ cd "/Users/my/Desktop/Claude/MY Project"
 
 ### 3. ` /lit-review ` — Literature Search and Synthesis
 # Review a research topic
-@skills//lit-review.md, use the skill to review "climate risk and corporate finance"
+@skills//lit-review.md, use the skill to review the topic "climate risk and corporate finance"
 
 # Use a specific paper title or research question
-@skills//lit-review.md, use the skill to review  "Fama-French 3-factor model"
+@skills//lit-review.md, use the skill to review the papers/ "Fama-French 3-factor model"
 
 ### 4. ` /create-slides`  — Slide Creation Workflow
 # Create slides for a topic
