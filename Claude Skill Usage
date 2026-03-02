@@ -14,9 +14,10 @@ MY_Project/
 ├── skills/ # Workflow controllers
 │ ├── proofread.md # Generic proofread skill for Word/LaTeX/Quarto
 │ ├── review-paper.md # Manuscript review skill
-│ ├── lit-review.md # Literature review skill
-│ └── create-slides.md # Slide creation skill
+│ ├── ...
+│
 ├── papers/ # Source manuscripts / notes (.docx, .tex, .pdf, .qmd)
+├── data/ # Source data / codes (.docx, .tex, .do, .ipynb)
 ├── output/ # Generated drafts (slides, Quarto drafts, figures)
 ├── quality_reports/ # Proofread reports, review logs, plans, literature reviews
 ├── templates/ # Report templates, notation registry
