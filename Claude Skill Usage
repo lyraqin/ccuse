@@ -86,8 +86,6 @@ cd "/Users/my/Desktop/Claude/MY Project"
 
 ###6.` /validate-citations`  —  Validate Citations
 # LaTeX manuscript
-@validate-citations papers/firm_innovation.pdf
-
 @validate-citations papers/firm_innovation.tex
 
 # Quarto draft
