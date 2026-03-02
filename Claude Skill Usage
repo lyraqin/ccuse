@@ -62,4 +62,39 @@ cd "/Users/my/Desktop/Claude/MY Project"
 # Use a source paper as input
 @skills/create-slides.md, use this skill to create slides for "papers/***.docx"
 
+###5.` /econometric-spec-review`  —  Econometric Specification Review
+# Python script
+@econometric-spec-review.md data/experiment.py
 
+# R script
+@econometric-spec-review.md data/panel_analysis.R
+
+# MATLAB script
+@econometric-spec-review.md data/analysis.m
+
+# Stata .do file
+@econometric-spec-review.md data/panel_analysis.do
+
+# LaTeX manuscript
+@econometric-spec-review.md data/firm_innovation.tex
+
+# Word manuscript
+@econometric-spec-review.md data/firm_innovation.docx
+
+# Quarto draft
+@econometric-spec-review.md data/firm_innovation.qmd
+
+###6.` /validate-citations`  —  Validate Citations
+# LaTeX manuscript
+@validate-citations papers/firm_innovation.pdf
+
+@validate-citations papers/firm_innovation.tex
+
+# Quarto draft
+@validate-citations papers/Lecture1.qmd
+
+# Markdown
+@validate-citations papers/notes.md
+
+# Word manuscript
+@validate-citations papers/paper.docx
