@@ -41,4 +41,12 @@ npx @z_ai/coding-helper
 /add-dir [路径]: 将指定的目录添加到当前工作上下文中，让AI能够感知和操作多个文件夹。
 
 
-
+cd /Users/my/.claude
+# 拉取最新（避免冲突）
+git pull origin main --rebase
+# 添加改动
+git add .
+# 提交（如果没变化就跳过）
+git commit -m "auto update $(date '+%Y-%m-%d %H:%M:%S')" || exit 0
+# 推送
+git push origin main
