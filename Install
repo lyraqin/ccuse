@@ -1,17 +1,17 @@
-1. 安装 Install Node.js
+# 安装 Install Node.js
 打开终端，输入 
 node -v
 如果显示版本号 → 已经装过，跳过这一步
 如果提示找不到 → 去 nodejs.org下载安装包，双击安装即可 #https://nodejs.org/
 
-2. 安装 Claude，打开终端，输入 
+# 安装 Claude，打开终端，输入 
 npm install -g @anthropic-ai/claude-code
 验证安装是否成功
 claude --version
 输出类似
 2.1.42 (Claude Code)
 
-3. 换国产大模型（智谱 GLM 系列）
+# 换国产大模型（智谱 GLM 系列）
 访问 智谱开放平台，注册账号，然后在 API Keys 页面创建一个 Key，复制（可选在智谱 Coding 套餐页购买一个套餐）
 自动化配置，终端输入
 npx @z_ai/coding-helper
@@ -19,7 +19,7 @@ npx @z_ai/coding-helper
 粘贴复制的 API Key
 启用「套餐专属 MCP」
 
-4. 首次简单使用
+# 首次简单使用
 终端输入
 /init
 介绍你的背景，比如：
@@ -27,12 +27,13 @@ npx @z_ai/coding-helper
 我的职业是**，想利用 Cloud Code 来提升科研效率。
 请用中文跟我交流。"
 
-5. 提示和常用命令
+# 提示和常用命令
 建议新建一个专门的文件夹（比如“AI项目”），把要处理的文件拖进去，再输入Claude启动，它就有了你的项目记忆。
 恢复与查看历史对话: claude -c 直接进入上次对话；claude -r 打开历史对话记录（使用较多）
 拖拽文件/文件夹超方便直接把文件夹或文件拖到终端窗口里，Cloud Code 会自动识别路径，不需要手动输入文件路径。
 粘贴图片用 Control + V，不是 Command + V。
 
+# 常用命令
 /init：初始化项目，生成 `CLAUDE.md` 文件。这相当于给 AI 递了一份“项目说明书”。
 /status：查看当前版本、模型、接口和代理状态。
 /clear：发现 AI “跑偏”了？直接清空历史，重新开始。
@@ -40,13 +41,15 @@ npx @z_ai/coding-helper
 /model：查看或切换当前使用的 AI 模型。
 /add-dir [路径]: 将指定的目录添加到当前工作上下文中，让AI能够感知和操作多个文件夹。
 
-
+#Bash
 cd /Users/my/.claude
-# 拉取最新（避免冲突）
-git pull origin main --rebase
-# 添加改动
+## 查看
+git status
+## 添加改动
 git add .
-# 提交（如果没变化就跳过）
-git commit -m "auto update $(date '+%Y-%m-%d %H:%M:%S')" || exit 0
-# 推送
-git push origin main
+## 提交
+git commit -m "描述你的修改"
+## 推送
+git push 
+##colone
+git clone https://github.com/lyraqin/claude-my-project.git
