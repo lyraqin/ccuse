@@ -1,36 +1,3 @@
-# MY_Project Structure and Claude Skill Usage
-
-This document summarizes the folder structure of the project and provides instructions for using each skill and agent in Claude / Claude Code CLI.
-
----
-
-## Project Structure
-MY_Project/
-├── CLAUDE.MD # Project guide, instructions
-├── MEMORY.MD # memory, and shortcuts
-├── agents/ # Task-specific agents
-│ ├── proofreader.md # Proofreading agent
-│ └── ...
-├── skills/ # Workflow controllers
-│ ├── proofread.md # Generic proofread skill for Word/LaTeX/Quarto
-│ ├── review-paper.md # Manuscript review skill
-│ ├── ...
-│
-├── papers/ # Source manuscripts / notes (.docx, .tex, .pdf, .qmd)
-├── data/ # Source data / codes (.docx, .tex, .do, .ipynb)
-├── output/ # Generated drafts (slides, Quarto drafts, figures)
-├── quality_reports/ # Proofread reports, review logs, plans, literature reviews
-├── templates/ # Report templates, notation registry
-└── scripts/ # Optional automation scripts (e.g., batch processing)
-
-
-cd "/Users/my/Desktop/Claude/MY Project"
-@agents/***.md
-@skills/***.md
----
-
-
-
 ## Skill & Agent Usage in Claude / Claude Code CLI
 
 ### 1. `/proofread` — Proofreading Documents
